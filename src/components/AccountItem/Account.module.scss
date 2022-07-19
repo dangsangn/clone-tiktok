@@ -1,0 +1,37 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  width: 100%;
+}
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 12px;
+}
+.account {
+}
+.name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.describe {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--grey);
+  font-size: 1.4rem;
+  line-height: 20px;
+}
+
+.wrap-title {
+  display: flex;
+  align-items: center;
+}
+
+.ticked-icon {
+  margin-left: 4px;
+}

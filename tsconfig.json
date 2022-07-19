@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "target": "es2016",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,     
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["src", "index.d.ts","types", "custom.d.ts", "css.d.ts"],
+}

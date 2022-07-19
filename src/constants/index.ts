@@ -1,0 +1,1 @@
+export const API_SEARCH = "https://tiktok.fullstack.edu.vn/api/users/search?q=hoaa&type=less";
