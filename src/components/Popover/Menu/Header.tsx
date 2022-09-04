@@ -5,7 +5,11 @@ import React from "react";
 import styles from "./Menu.module.scss";
 const cx = classNames.bind(styles);
 
-const Header = ({ title, onBack }) => {
+type HeaderProps = {
+  title: string;
+  onBack: () => void;
+};
+const Header = ({ title, onBack }: HeaderProps) => {
   return (
     <Button
       className={cx("menu-header")}

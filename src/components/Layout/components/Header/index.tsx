@@ -1,3 +1,4 @@
+import React from "react";
 import Logo from "@/assets/images/logo.svg";
 import Button from "@/components/Button";
 import Image from "@/components/Image";
@@ -12,10 +13,13 @@ import classNames from "classnames/bind";
 import "tippy.js/dist/tippy.css";
 import Search from "../Search";
 import styles from "./Header.module.scss";
+import useModal from "@/hooks/useModal";
+import Login from "@/components/Login";
 const cx = classNames.bind(styles);
 
 export default function Header() {
-  const currentUser = true;
+  const [loginPresent, loginDismiss] = useModal(<Login />);
+  const currentUser = false;
   const handleClick = () => {
     console.log("click");
   };
@@ -52,7 +56,7 @@ export default function Header() {
               </Tippy>
             </>
           ) : (
-            <Button onClick={handleClick} primary>
+            <Button onClick={loginPresent} primary>
               Log in
             </Button>
           )}

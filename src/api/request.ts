@@ -3,9 +3,7 @@ import STATUS_CODE from "../config";
 
 interface ResponseData<T> {
   code: number;
-
   data: T;
-
   msg: string;
 }
 
@@ -17,9 +15,7 @@ axios.defaults.baseURL = process.env.REACT_APP_BASE_API;
 
 axios.interceptors.request.use(
   (config: AxiosRequestConfig) => {
-    const token = ""; // getToken();
-
-    /* eslint-disable  no-param-reassign */
+    const token = ""; // getToken(); //handle get token
     if (token && config.headers) {
       config.headers.token = token;
     }
@@ -35,21 +31,7 @@ axios.interceptors.response.use(
       return Promise.resolve(response);
     }
     if (response.status === STATUS_CODE.LOGIN_EXPIRE) {
-      // Modal.confirm({
-      //   title: "系统提示",
-      //   content: response.data.msg,
-      //   okText: "重新登录",
-      //   onOk() {
-      //     store.dispatch(clearSideBarRoutes());
-      //     store.dispatch(logout());
-      //     window.location.href = `${
-      //       window.location.origin
-      //     }/react-ant-admin/system/login?redirectURL=${encodeURIComponent(
-      //       window.location.href
-      //     )}`;
-      //   },
-      //   onCancel() {},
-      // });
+      //handle when expire login
 
       return Promise.reject(new Error(response.data.msg));
     }

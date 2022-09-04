@@ -1,0 +1,35 @@
+.wrapper {
+  padding: 16px 8px 8px;
+}
+.title {
+  color: rgba(22, 24, 35, 0.75);
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 20px;
+  margin-bottom: 16px;
+}
+.wrapper-link {
+  display: inline-flex;
+  margin-right: 8px;
+  margin-bottom: 12px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 3px 10px;
+  border: 1px solid rgba(22, 24, 35, 0.2);
+  border-radius: 12px;
+  transition: background ease-in-out 0.2s;
+  &:hover {
+    background: rgba(22, 24, 35, 0.03);
+  }
+}
+
+.name {
+  padding-left: 6px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: rgba(22, 24, 35, 0.75);
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 18px;
+}

@@ -1,10 +1,9 @@
 import { request } from "@/api/request";
+import { ParamsProps, ResponseType } from "./type";
 
-export type ParamsProps = {
-  q: string;
-  type?: "less" | "more";
-};
-export function apiSearchUser(params?: ParamsProps) {
+export function apiSearchUser(
+  params?: ParamsProps
+): Promise<ResponseType<any>> {
   return request({
     method: "GET",
     url: "/users/search",

@@ -1,0 +1,33 @@
+.navbar {
+  padding: 0;
+}
+
+.link-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px;
+  background-color: var(--white);
+  border-radius: 4px;
+  color: var(--black);
+  transition: color 0.2s, background-color 0.2s ease-in-out;
+  &:hover {
+    background-color: var(--color-hover);
+  }
+}
+
+.link-item.active {
+  color: var(--primary);
+}
+
+.wrap-icon {
+  color: inherit;
+}
+
+.wrap-text {
+  margin-left: 8px;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 25px;
+  color: inherit;
+}

@@ -59,55 +59,65 @@ const Search = () => {
     }
   };
 
-  const handlleClickOnsite = () => {
+  const handleClickOnsite = () => {
     setVisible(false);
   };
 
   return (
-    <HeadlessTippy
-      interactive
-      render={(attrs) => (
-        <div {...attrs} tabIndex={-1} className={cx("search-result")}>
-          <Popover>
-            <div className={cx("wrap-list-search")}>
-              <p className={cx("search-title")}>Accounts</p>
-              {listSearch.map((item, index) => (
-                <AccountItem key={index} data={item} />
-              ))}
-            </div>
-          </Popover>
-        </div>
-      )}
-      visible={visible && listSearch.length > 0}
-      onClickOutside={handlleClickOnsite}
-    >
-      <div>
-        <div className={cx("wrap-input")}>
-          <input
-            className={cx("input")}
-            type="text"
-            placeholder="Search accounts and videos"
-            onChange={handleSearch}
-            value={search}
-            ref={searchRef}
-            onFocus={handleFocus}
-          />
-          {search && !loading && (
-            <FontAwesomeIcon
-              onClick={handleClear}
-              className={cx("x-mark-icon")}
-              icon={faCircleXmark}
+    <div>
+      <HeadlessTippy
+        interactive
+        render={(attrs) => (
+          <div {...attrs} tabIndex={-1} className={cx("search-result")}>
+            <Popover>
+              <div className={cx("wrap-list-search")}>
+                <p className={cx("search-title")}>Accounts</p>
+                {listSearch.map((item: any, index) => (
+                  <AccountItem
+                    key={index}
+                    id={item?.id}
+                    avatar={item?.avatar}
+                    fullName={item?.full_name}
+                    nickname={item?.nickname}
+                    tick={item?.tick}
+                  />
+                ))}
+              </div>
+            </Popover>
+          </div>
+        )}
+        visible={visible && listSearch.length > 0}
+        onClickOutside={handleClickOnsite}
+        appendTo={() => document.body}
+      >
+        <div>
+          <div className={cx("wrap-input")}>
+            <input
+              className={cx("input")}
+              type="text"
+              placeholder="Search accounts and videos"
+              onChange={handleSearch}
+              value={search}
+              ref={searchRef}
+              onFocus={handleFocus}
             />
-          )}
-          {loading && (
-            <img src={loadingImg} alt="" className={cx("loading-icon")} />
-          )}
-          <button className={cx("button-search")}>
-            <SearchIcon className={cx("search-icon")} />
-          </button>
+            {search && !loading && (
+              <FontAwesomeIcon
+                onClick={handleClear}
+                className={cx("x-mark-icon")}
+                icon={faCircleXmark}
+              />
+            )}
+            {loading && (
+              <img src={loadingImg} alt="" className={cx("loading-icon")} />
+            )}
+            <button className={cx("button-search")}>
+              <SearchIcon className={cx("search-icon")} />
+            </button>
+          </div>
         </div>
-      </div>
-    </HeadlessTippy>
+      </HeadlessTippy>
+    </div>
   );
 };
 
