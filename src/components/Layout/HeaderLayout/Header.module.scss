@@ -1,0 +1,8 @@
+.header {
+  height: var(--height-header);
+  width: 100%;
+}
+
+.body {
+  min-height: calc(100vh - var(--height-header));
+}

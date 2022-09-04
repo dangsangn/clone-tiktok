@@ -3,11 +3,13 @@
   --spacer: 9px;
   --search-height: 46px;
   --border-order-search: 92px;
+
   width: 100%;
   box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
   position: fixed;
   top: 0;
   z-index: 1000;
+  background-color: var(--white);
   &__content {
     height: 60px;
     max-width: 1150px;

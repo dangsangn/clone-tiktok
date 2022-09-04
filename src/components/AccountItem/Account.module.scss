@@ -3,6 +3,11 @@
   align-items: center;
   padding: 8px;
   width: 100%;
+  background-color: var(--white);
+  transition: background-color 0.2s ease-in-out;
+  &:hover {
+    background-color: var(--color-hover);
+  }
 }
 .avatar {
   width: 40px;
@@ -10,13 +15,20 @@
   border-radius: 50%;
   overflow: hidden;
   margin-right: 12px;
+  &--small{
+    width: 32px;
+    height: 32px;
+  }
 }
-.account {
-}
+
 .name {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  &--small{
+    font-size: 1.6rem !important;
+    line-height: 22px !important;
+  }
 }
 .describe {
   text-overflow: ellipsis;
@@ -25,6 +37,10 @@
   color: var(--grey);
   font-size: 1.4rem;
   line-height: 20px;
+  &--small {
+    font-size: 1.2rem !important;
+    line-height: 15px !important;
+  }
 }
 
 .wrap-title {
@@ -34,4 +50,68 @@
 
 .ticked-icon {
   margin-left: 4px;
+}
+
+//css info account
+.wrap-subscribe {
+  position: relative;
+  width: 320px;
+  box-sizing: border-box;
+  padding: 20px;
+  background: rgb(255, 255, 255);
+  box-shadow: rgb(0 0 0 / 12%) 0px 4px 16px;
+  border-radius: 8px;
+}
+
+.subscribe-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.subscribe-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  img {
+    object-fit: contain;
+  }
+}
+
+.name {
+  color: rgb(22, 24, 35);
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 22px;
+}
+
+.describe {
+  color: rgb(22, 24, 35);
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 20px;
+}
+
+.extend-info {
+  margin-top: 8px;
+  span {
+    font-size: 1.7rem;
+    line-height: 20px;
+    display: inline-block;
+  }
+  span+span {
+    margin-left: 6px;
+  }
+  span:nth-child(odd) {
+    font-weight: 700;
+  }
+  span:nth-child(even) {
+    color: rgba(22, 24, 35, 0.75);
+  }
+}
+
+.modify {
+  min-width: 106px;
 }

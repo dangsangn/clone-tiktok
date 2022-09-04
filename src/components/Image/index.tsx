@@ -8,10 +8,13 @@ type Props = {
   src: string;
   alt?: string;
   className?: any;
+  style?: React.CSSProperties;
+  width?: number;
+  height?: number;
 };
 
 const Image = forwardRef<HTMLImageElement, Props>(
-  ({ src = "", alt = "image", className }, ref) => {
+  ({ src = "", alt = "image", className, style, width, height }, ref) => {
     const [srcImage, setSrcImage] = useState<string>(src);
 
     const handleError = () => {
@@ -24,6 +27,9 @@ const Image = forwardRef<HTMLImageElement, Props>(
         alt={alt}
         src={srcImage}
         onError={handleError}
+        style={style}
+        width={width || "100%"}
+        height={height || "100%"}
       />
     );
   }

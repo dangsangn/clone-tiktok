@@ -1,12 +1,16 @@
 import React from "react";
+
 export type IconProp = {
   className?: string;
   width?: string;
   height?: string;
+  onClick?: () => void;
+  color?: string;
 };
 
-export const SendIcon = ({ className, width, height }: IconProp) => (
+export const SendIcon = ({ className, width, height, ...props }: IconProp) => (
   <svg
+    {...props}
     className={className}
     width={width || "2.6rem"}
     height={height || "2.6rem"}
@@ -22,7 +26,12 @@ export const SendIcon = ({ className, width, height }: IconProp) => (
   </svg>
 );
 
-export const MessageIcon = ({ className, width, height }: IconProp) => (
+export const MessageIcon = ({
+  className,
+  width,
+  height,
+  ...props
+}: IconProp) => (
   <svg
     className={className}
     width={width || "3.2rem"}
@@ -30,6 +39,7 @@ export const MessageIcon = ({ className, width, height }: IconProp) => (
     viewBox="0 0 32 32"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
+    {...props}
   >
     <path
       fillRule="evenodd"
@@ -39,8 +49,9 @@ export const MessageIcon = ({ className, width, height }: IconProp) => (
   </svg>
 );
 
-export const AddIcon = ({ className, width, height }: IconProp) => (
+export const AddIcon = ({ className, width, height, ...props }: IconProp) => (
   <svg
+    {...props}
     className={className}
     width={width || "2rem"}
     height={height || "2rem"}
@@ -56,8 +67,14 @@ export const AddIcon = ({ className, width, height }: IconProp) => (
   </svg>
 );
 
-export const ProfileIcon = ({ className, width, height }: IconProp) => (
+export const ProfileIcon = ({
+  className,
+  width,
+  height,
+  ...props
+}: IconProp) => (
   <svg
+    {...props}
     className={className}
     width={width || "2rem"}
     height={height || "2rem"}
@@ -73,8 +90,9 @@ export const ProfileIcon = ({ className, width, height }: IconProp) => (
   </svg>
 );
 
-export const CoinIcon = ({ className, width, height }: IconProp) => (
+export const CoinIcon = ({ className, width, height, ...props }: IconProp) => (
   <svg
+    {...props}
     className={className}
     width={width || "2rem"}
     height={height || "2rem"}
@@ -95,8 +113,14 @@ export const CoinIcon = ({ className, width, height }: IconProp) => (
   </svg>
 );
 
-export const SettingIcon = ({ className, width, height }: IconProp) => (
+export const SettingIcon = ({
+  className,
+  width,
+  height,
+  ...props
+}: IconProp) => (
   <svg
+    {...props}
     className={className}
     width={width || "2rem"}
     height={height || "2rem"}
@@ -112,8 +136,14 @@ export const SettingIcon = ({ className, width, height }: IconProp) => (
   </svg>
 );
 
-export const LanguageIcon = ({ className, width, height }: IconProp) => (
+export const LanguageIcon = ({
+  className,
+  width,
+  height,
+  ...props
+}: IconProp) => (
   <svg
+    {...props}
     className={className}
     width={width || "2rem"}
     height={height || "2rem"}
@@ -129,8 +159,14 @@ export const LanguageIcon = ({ className, width, height }: IconProp) => (
   </svg>
 );
 
-export const FeedbackIcon = ({ className, width, height }: IconProp) => (
+export const FeedbackIcon = ({
+  className,
+  width,
+  height,
+  ...props
+}: IconProp) => (
   <svg
+    {...props}
     className={className}
     width={width || "2rem"}
     height={height || "2rem"}
@@ -146,8 +182,14 @@ export const FeedbackIcon = ({ className, width, height }: IconProp) => (
   </svg>
 );
 
-export const KeyboardIcon = ({ className, width, height }: IconProp) => (
+export const KeyboardIcon = ({
+  className,
+  width,
+  height,
+  ...props
+}: IconProp) => (
   <svg
+    {...props}
     className={className}
     width={width || "2rem"}
     height={height || "2rem"}
@@ -163,8 +205,14 @@ export const KeyboardIcon = ({ className, width, height }: IconProp) => (
   </svg>
 );
 
-export const LogoutIcon = ({ className, width, height }: IconProp) => (
+export const LogoutIcon = ({
+  className,
+  width,
+  height,
+  ...props
+}: IconProp) => (
   <svg
+    {...props}
     className={className}
     width={width || "2rem"}
     height={height || "2rem"}
@@ -180,8 +228,14 @@ export const LogoutIcon = ({ className, width, height }: IconProp) => (
   </svg>
 );
 
-export const SearchIcon = ({ className, width, height }: IconProp) => (
+export const SearchIcon = ({
+  className,
+  width,
+  height,
+  ...props
+}: IconProp) => (
   <svg
+    {...props}
     className={className}
     width={width || "2.4rem"}
     height={height || "2.4rem"}
@@ -197,21 +251,9 @@ export const SearchIcon = ({ className, width, height }: IconProp) => (
   </svg>
 );
 
-export const HeartIcon = ({ className, width, height }: IconProp) => (
+export const ToUpIcon = ({ className, width, height, ...props }: IconProp) => (
   <svg
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="currentColor"
-    width={width || "2.4rem"}
-    height={height || "2.4rem"}
-    className={className}
-  >
-    <use xlinkHref="#svg-heart-fill"></use>
-  </svg>
-);
-
-export const ToUpIcon = ({ className, width, height }: IconProp) => (
-  <svg
+    {...props}
     className={className}
     width={width || "1.6rem"}
     height={height || "1.6rem"}
@@ -228,8 +270,14 @@ export const ToUpIcon = ({ className, width, height }: IconProp) => (
   </svg>
 );
 
-export const ArrowLeftIcon = ({ className, width, height }: IconProp) => (
+export const ArrowLeftIcon = ({
+  className,
+  width,
+  height,
+  ...props
+}: IconProp) => (
   <svg
+    {...props}
     className={className}
     width={width || "2rem"}
     height={height || "2rem"}
@@ -245,8 +293,14 @@ export const ArrowLeftIcon = ({ className, width, height }: IconProp) => (
   </svg>
 );
 
-export const TickedIcon = ({ className, width, height }: IconProp) => (
+export const TickedIcon = ({
+  className,
+  width,
+  height,
+  ...props
+}: IconProp) => (
   <svg
+    {...props}
     className={className}
     width={width || "1.4rem"}
     height={height || "1.4rem"}
@@ -260,6 +314,429 @@ export const TickedIcon = ({ className, width, height }: IconProp) => (
       clipRule="evenodd"
       d="M37.1213 15.8787C38.2929 17.0503 38.2929 18.9497 37.1213 20.1213L23.6213 33.6213C22.4497 34.7929 20.5503 34.7929 19.3787 33.6213L10.8787 25.1213C9.70711 23.9497 9.70711 22.0503 10.8787 20.8787C12.0503 19.7071 13.9497 19.7071 15.1213 20.8787L21.5 27.2574L32.8787 15.8787C34.0503 14.7071 35.9497 14.7071 37.1213 15.8787Z"
       fill="white"
+    ></path>
+  </svg>
+);
+
+export const HomeIcon = ({ className, width, height, ...props }: IconProp) => (
+  <svg
+    {...props}
+    className={className}
+    width={width || "3.2rem"}
+    height={height || "3.2rem"}
+    viewBox="0 0 48 48"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M24.9505 7.84001C24.3975 7.38666 23.6014 7.38666 23.0485 7.84003L6.94846 21.04C6.45839 21.4418 6.2737 22.1083 6.48706 22.705C6.70041 23.3017 7.26576 23.7 7.89949 23.7H10.2311L11.4232 36.7278C11.5409 38.0149 12.6203 39 13.9128 39H21.5C22.0523 39 22.5 38.5523 22.5 38V28.3153C22.5 27.763 22.9477 27.3153 23.5 27.3153H24.5C25.0523 27.3153 25.5 27.763 25.5 28.3153V38C25.5 38.5523 25.9477 39 26.5 39H34.0874C35.3798 39 36.4592 38.0149 36.577 36.7278L37.7691 23.7H40.1001C40.7338 23.7 41.2992 23.3017 41.5125 22.705C41.7259 22.1082 41.5412 21.4418 41.0511 21.04L24.9505 7.84001Z"
+    ></path>
+  </svg>
+);
+
+export const GroupPerson = ({
+  className,
+  width,
+  height,
+  ...props
+}: IconProp) => (
+  <svg
+    {...props}
+    width={width || "3.2rem"}
+    height={height || "3.2rem"}
+    className={className}
+    viewBox="0 0 48 48"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M18 12.5C15.5897 12.5 13.5849 14.5018 13.5849 17.0345C13.5849 19.5672 15.5897 21.569 18 21.569C20.4103 21.569 22.4151 19.5672 22.4151 17.0345C22.4151 14.5018 20.4103 12.5 18 12.5ZM10.5849 17.0345C10.5849 12.9017 13.8766 9.5 18 9.5C22.1234 9.5 25.4151 12.9017 25.4151 17.0345C25.4151 21.1673 22.1234 24.569 18 24.569C13.8766 24.569 10.5849 21.1673 10.5849 17.0345ZM18 29.8793C14.0801 29.8793 10.7403 32.5616 9.69697 36.2673C9.5473 36.7989 9.03833 37.1708 8.49337 37.0811L7.50662 36.9189C6.96166 36.8292 6.58837 36.3131 6.72325 35.7776C8.00732 30.6788 12.5509 26.8793 18 26.8793C23.449 26.8793 27.9927 30.6788 29.2767 35.7776C29.4116 36.3131 29.0383 36.8292 28.4934 36.9189L27.5066 37.0811C26.9617 37.1708 26.4527 36.7989 26.303 36.2673C25.2597 32.5616 21.9199 29.8793 18 29.8793Z"
+    ></path>
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M33 31.5371C32.2445 31.5371 31.5198 31.668 30.8447 31.9093C30.3246 32.0951 29.7189 31.9243 29.4549 31.4392L28.9769 30.5608C28.713 30.0757 28.8907 29.463 29.4009 29.2516C30.513 28.791 31.7285 28.5371 33 28.5371C37.4554 28.5371 41.1594 31.6303 42.2706 35.7812C42.4135 36.3147 42.0386 36.8308 41.4935 36.9196L40.5065 37.0804C39.9614 37.1692 39.4546 36.7956 39.2894 36.2686C38.4217 33.5 35.91 31.5371 33 31.5371Z"
+    ></path>
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M33 18.5C31.6193 18.5 30.5 19.6193 30.5 21C30.5 22.3807 31.6193 23.5 33 23.5C34.3807 23.5 35.5 22.3807 35.5 21C35.5 19.6193 34.3807 18.5 33 18.5ZM27.5 21C27.5 17.9624 29.9624 15.5 33 15.5C36.0376 15.5 38.5 17.9624 38.5 21C38.5 24.0376 36.0376 26.5 33 26.5C29.9624 26.5 27.5 24.0376 27.5 21Z"
+    ></path>
+  </svg>
+);
+
+export const LiveIcon = ({ className, width, height, ...props }: IconProp) => (
+  <svg
+    {...props}
+    width={width || "3.2rem"}
+    height={height || "3.2rem"}
+    className={className}
+    viewBox="0 0 32 32"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M7.78511 10.3334C6.95518 10.3334 6.33301 10.9792 6.33301 11.7143V20.2858C6.33301 21.0209 6.95518 21.6667 7.78511 21.6667H18.5744C19.4043 21.6667 20.0265 21.0209 20.0265 20.2858V17.5602C20.0265 17.1826 20.2392 16.8372 20.5763 16.6672C20.9135 16.4973 21.3177 16.5317 21.6212 16.7563L25.6663 19.7488V12.2513L21.6212 15.2439C21.3177 15.4684 20.9135 15.5029 20.5763 15.3329C20.2392 15.1629 20.0265 14.8175 20.0265 14.4399V11.7143C20.0265 10.9792 19.4043 10.3334 18.5744 10.3334H7.78511ZM25.6855 12.2371C25.6831 12.2388 25.6839 12.2383 25.6839 12.2383L25.6855 12.2371ZM25.6716 12.2177C25.673 12.2212 25.6746 12.2243 25.6763 12.2269C25.6798 12.2324 25.6834 12.2355 25.6855 12.2371L25.6874 12.2383C25.6874 12.2383 25.6865 12.238 25.6839 12.2383M4.33301 11.7143C4.33301 9.81952 5.90653 8.33337 7.78511 8.33337H18.5744C20.453 8.33337 22.0265 9.81953 22.0265 11.7143V12.4562L24.4963 10.629C25.0929 10.1877 25.8879 10.1155 26.5542 10.4359C27.224 10.758 27.6663 11.4325 27.6663 12.1905V19.8096C27.6663 20.5676 27.224 21.2421 26.5542 21.5642C25.888 21.8846 25.0929 21.8124 24.4963 21.371L22.0265 19.5439V20.2858C22.0265 22.1806 20.453 23.6667 18.5744 23.6667H7.78511C5.90653 23.6667 4.33301 22.1806 4.33301 20.2858V11.7143Z"
+    ></path>
+    <path d="M15 15.134C15.6667 15.5189 15.6667 16.4811 15 16.866L12 18.5981C11.3333 18.983 10.5 18.5019 10.5 17.7321L10.5 14.2679C10.5 13.4981 11.3333 13.017 12 13.4019L15 15.134Z"></path>
+  </svg>
+);
+
+export const HashTagIcon = ({
+  className,
+  width,
+  height,
+  ...props
+}: IconProp) => (
+  <svg
+    {...props}
+    className={className}
+    width={width || "1.6rem"}
+    height={height || "1.6rem"}
+    viewBox="0 0 48 48"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M16.4263 15L16.9566 3.95205C16.9822 3.41902 17.4218 2.99999 17.9554 2.99999H19.9494C20.5202 2.99999 20.9752 3.47701 20.9483 4.04718L20.4308 15H28.4263L28.9566 3.95205C28.9822 3.41902 29.4218 2.99999 29.9554 2.99999H31.9494C32.5202 2.99999 32.9752 3.47701 32.9483 4.04718L32.4308 15H43C43.5523 15 44 15.4477 44 16V18C44 18.5523 43.5523 19 43 19H32.2404L31.8118 28H42C42.5523 28 43 28.4477 43 29V31C43 31.5523 42.5523 32 42 32H31.6213L31.0434 44.0479C31.0178 44.581 30.5782 45 30.0446 45H28.0507C27.4798 45 27.0248 44.523 27.0518 43.9528L27.6168 32H19.6213L19.0434 44.0479C19.0178 44.581 18.5782 45 18.0446 45H16.0507C15.4798 45 15.0248 44.523 15.0518 43.9528L15.6168 32H5C4.44772 32 4 31.5523 4 31V29C4 28.4477 4.44772 28 5 28H15.8073L16.2358 19H6C5.44772 19 5 18.5523 5 18V16C5 15.4477 5.44772 15 6 15H16.4263ZM20.2404 19L19.8118 28H27.8073L28.2358 19H20.2404Z"
+    ></path>
+  </svg>
+);
+
+export const MusicIcon = ({ className, width, height, ...props }: IconProp) => (
+  <svg
+    {...props}
+    className={className}
+    width={width || "1.6rem"}
+    height={height || "1.6rem"}
+    viewBox="0 0 48 48"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M35.0001 10.7587C35.0001 10.1169 34.4041 9.64129 33.7784 9.78359L17.7902 13.4192C17.335 13.5227 17.0119 13.9275 17.0119 14.3943V37.9972H17.0109C17.0374 40.1644 14.8022 42.4189 11.612 43.2737C8.05093 44.2279 4.64847 43.0769 4.01236 40.7028C3.37624 38.3288 5.74735 35.6308 9.30838 34.6766C10.606 34.3289 11.8826 34.2608 13.0119 34.4294V14.3943C13.0119 12.0601 14.6271 10.0364 16.9033 9.5188L32.8914 5.88317C36.0204 5.17165 39.0001 7.54986 39.0001 10.7587V33.1191C39.084 35.3108 36.8331 37.6109 33.6032 38.4763C30.0421 39.4305 26.6397 38.2795 26.0036 35.9055C25.3675 33.5315 27.7386 30.8334 31.2996 29.8792C32.5961 29.5319 33.8715 29.4635 35.0001 29.6316V10.7587Z"
+    ></path>
+  </svg>
+);
+
+export const HeartIcon = ({ className, width, height, ...props }: IconProp) => (
+  <svg
+    className={className}
+    width={"2.4rem" || width}
+    height={"2.4rem" || height}
+    viewBox="0 0 24 24"
+    {...props}
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g clipPath="url(#HeartFill_clip0)">
+      <g filter="url(#HeartFill_filter0_d)">
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M7.5 2.25C10.5 2.25 12 4.25 12 4.25C12 4.25 13.5 2.25 16.5 2.25C20 2.25 22.5 4.99999 22.5 8.5C22.5 12.5 19.2311 16.0657 16.25 18.75C14.4095 20.4072 13 21.5 12 21.5C11 21.5 9.55051 20.3989 7.75 18.75C4.81949 16.0662 1.5 12.5 1.5 8.5C1.5 4.99999 4 2.25 7.5 2.25Z"
+        ></path>
+      </g>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M2.40179 12.1998C3.58902 14.6966 5.7592 16.9269 7.74989 18.75C9.5504 20.3989 10.9999 21.5 11.9999 21.5C12.9999 21.5 14.4094 20.4072 16.2499 18.75C19.231 16.0657 22.4999 12.5 22.4999 8.49997C22.4999 8.41258 22.4983 8.32566 22.4952 8.23923C20.5671 13.6619 13.6787 18.5 11.75 18.5C10.3127 18.5 5.61087 15.8131 2.40179 12.1998Z"
+        fillOpacity="0.03"
+      ></path>
+    </g>
+    <defs>
+      <filter
+        id="HeartFill_filter0_d"
+        x="-0.9"
+        y="1.05"
+        width="25.8"
+        height="24.05"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        ></feColorMatrix>
+        <feOffset dy="1.2"></feOffset>
+        <feGaussianBlur stdDeviation="1.2"></feGaussianBlur>
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"
+        ></feColorMatrix>
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow"
+        ></feBlend>
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow"
+          result="shape"
+        ></feBlend>
+      </filter>
+      <clipPath id="HeartFill_clip0">
+        <rect width="24" height="24" fill="white"></rect>
+      </clipPath>
+    </defs>
+  </svg>
+);
+
+export const CommentIcon = ({
+  className,
+  width,
+  height,
+  ...props
+}: IconProp) => (
+  <svg
+    {...props}
+    className={className}
+    width={width || "2.4rem"}
+    height={height || "2.4rem"}
+    viewBox="0 0 20 20"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g clipPath="url(#BubbleEllipsisRightFill_clip0)">
+      <g opacity="1" filter="url(#BubbleEllipsisRightFill_filter0_d)">
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M16.0393 14.7137C17.75 13 18.75 11.215 18.75 9.13662C18.75 4.91897 14.8887 1.49997 10.125 1.49997C5.36129 1.49997 1.5 4.91897 1.5 9.13675C1.5 13.3545 5.48622 16.25 10.25 16.25V17.6487C10.25 18.0919 10.7095 18.3771 11.0992 18.1659C12.3166 17.5062 14.5725 16.183 16.0393 14.7137ZM5.93527 8.10679C6.61608 8.10679 7.16797 8.65471 7.16797 9.32962C7.16797 10.0059 6.61608 10.5538 5.93527 10.5538C5.2556 10.5538 4.70368 10.0059 4.70368 9.32962C4.70368 8.65471 5.2556 8.10679 5.93527 8.10679ZM11.3572 9.32962C11.3572 8.65471 10.8055 8.10679 10.125 8.10679C9.44459 8.10679 8.89289 8.65471 8.89289 9.32962C8.89292 10.0059 9.44462 10.5538 10.125 10.5538C10.8055 10.5538 11.3572 10.0059 11.3572 9.32962ZM14.3146 8.10679C14.9953 8.10679 15.5464 8.65471 15.5464 9.32962C15.5464 10.0059 14.9953 10.5538 14.3146 10.5538C13.6339 10.5538 13.082 10.0059 13.0821 9.32962C13.0821 8.65471 13.6339 8.10679 14.3146 8.10679Z"
+        ></path>
+      </g>
+      <path
+        opacity="0.1"
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M10.25 16.2499C10.25 16.2499 15.0278 15.8807 17.025 13.3234C15.0278 16.1364 13.0307 17.6708 11.2831 18.1822C9.53561 18.6937 10.25 16.2499 10.25 16.2499Z"
+        fill="url(#BubbleEllipsisRightFill_paint0_linear)"
+      ></path>
+    </g>
+    <defs>
+      <filter
+        id="BubbleEllipsisRightFill_filter0_d"
+        x="0.5"
+        y="1.49997"
+        width="19.25"
+        height="18.737"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+        ></feColorMatrix>
+        <feOffset dy="1"></feOffset>
+        <feGaussianBlur stdDeviation="0.5"></feGaussianBlur>
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"
+        ></feColorMatrix>
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow"
+        ></feBlend>
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow"
+          result="shape"
+        ></feBlend>
+      </filter>
+      <linearGradient
+        id="BubbleEllipsisRightFill_paint0_linear"
+        x1="8.50426"
+        y1="15.6957"
+        x2="9.29499"
+        y2="18.1805"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop></stop>
+        <stop offset="1" stopOpacity="0.01"></stop>
+      </linearGradient>
+      <clipPath id="BubbleEllipsisRightFill_clip0">
+        <rect width="20" height="20" fill="white"></rect>
+      </clipPath>
+    </defs>
+  </svg>
+);
+
+export const ShareIcon = ({ className, width, height, ...props }: IconProp) => (
+  <svg
+    {...props}
+    className={className}
+    width={"2.4rem" || width}
+    height={"2.4rem" || height}
+    viewBox="0 0 48 48"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M26.4588 3.90871C25.3403 2.86068 23.4902 3.64074 23.4902 5.16041V13.0502C20.4499 14.1752 11.3194 18.1407 6.6047 26.6176C-1.49677 42.1311 3.82522 43.478 5.77105 39.7411C13.2467 29.1857 20.8146 30.4298 23.4902 31.3209V38.2274C23.4902 39.7114 25.2658 40.5055 26.4023 39.5298L43.3681 24.9655C44.9268 23.6274 44.9791 21.2608 43.4811 19.8573L26.4588 3.90871Z"
+    ></path>
+  </svg>
+);
+
+export const MuteIcon = ({ className, width, height, ...props }: IconProp) => (
+  <svg
+    {...props}
+    className={className}
+    width={width || "2.4rem"}
+    height={height || "2.4rem"}
+    viewBox="0 0 48 48"
+    fill="#fff"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M25 10.8685C25 8.47242 22.3296 7.04325 20.3359 8.37236L10.3944 15H6C4.34315 15 3 16.3431 3 18V30C3 31.6568 4.34314 33 6 33H10.3944L20.3359 39.6276C22.3296 40.9567 25 39.5276 25 37.1315V10.8685ZM29.2929 18.1213L35.1716 24L29.2929 29.8787C28.9024 30.2692 28.9024 30.9024 29.2929 31.2929L30.7071 32.7071C31.0976 33.0976 31.7308 33.0976 32.1213 32.7071L38 26.8284L43.8787 32.7071C44.2692 33.0976 44.9024 33.0976 45.2929 32.7071L46.7071 31.2929C47.0976 30.9024 47.0976 30.2692 46.7071 29.8787L40.8284 24L46.7071 18.1213C47.0976 17.7308 47.0976 17.0976 46.7071 16.7071L45.2929 15.2929C44.9024 14.9024 44.2692 14.9024 43.8787 15.2929L38 21.1716L32.1213 15.2929C31.7308 14.9024 31.0976 14.9024 30.7071 15.2929L29.2929 16.7071C28.9024 17.0976 28.9024 17.7308 29.2929 18.1213Z"
+    ></path>
+  </svg>
+);
+
+export const SpeakerIcon = ({
+  className,
+  width,
+  height,
+  ...props
+}: IconProp) => (
+  <svg
+    {...props}
+    className={className}
+    width={width || "2.4rem"}
+    height={height || "2.4rem"}
+    viewBox="0 0 48 48"
+    fill="#fff"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M20.3359 8.37236C22.3296 7.04325 25 8.47242 25 10.8685V37.1315C25 39.5276 22.3296 40.9567 20.3359 39.6276L10.3944 33H6C4.34314 33 3 31.6568 3 30V18C3 16.3431 4.34315 15 6 15H10.3944L20.3359 8.37236ZM21 12.737L12.1094 18.6641C11.7809 18.8831 11.3948 19 11 19H7V29H11C11.3948 29 11.7809 29.1169 12.1094 29.3359L21 35.263V12.737ZM32.9998 24C32.9998 21.5583 32.0293 19.3445 30.4479 17.7211C30.0625 17.3255 29.9964 16.6989 30.3472 16.2724L31.6177 14.7277C31.9685 14.3011 32.6017 14.2371 33.0001 14.6195C35.4628 16.9832 36.9998 20.3128 36.9998 24C36.9998 27.6872 35.4628 31.0168 33.0001 33.3805C32.6017 33.7629 31.9685 33.6989 31.6177 33.2724L30.3472 31.7277C29.9964 31.3011 30.0625 30.6745 30.4479 30.2789C32.0293 28.6556 32.9998 26.4418 32.9998 24ZM37.0144 11.05C36.6563 11.4705 36.7094 12.0995 37.1069 12.4829C40.1263 15.3951 42.0002 19.4778 42.0002 23.9999C42.0002 28.522 40.1263 32.6047 37.1069 35.5169C36.7094 35.9003 36.6563 36.5293 37.0144 36.9498L38.3109 38.4727C38.6689 38.8932 39.302 38.9456 39.7041 38.5671C43.5774 34.9219 46.0002 29.7429 46.0002 23.9999C46.0002 18.2569 43.5774 13.078 39.7041 9.43271C39.302 9.05421 38.6689 9.10664 38.3109 9.52716L37.0144 11.05Z"
+    ></path>
+  </svg>
+);
+
+export const ParallelIcon = ({
+  className,
+  width,
+  height,
+  ...props
+}: IconProp) => (
+  <svg
+    {...props}
+    className={className}
+    width={width || "2rem"}
+    height={height || "2rem"}
+    viewBox="0 0 48 48"
+    fill="#fff"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M8 6C8 5.44771 8.44772 5 9 5H17C17.5523 5 18 5.44772 18 6V42C18 42.5523 17.5523 43 17 43H9C8.44772 43 8 42.5523 8 42V6Z"></path>
+    <path d="M30 6C30 5.44771 30.4477 5 31 5H39C39.5523 5 40 5.44772 40 6V42C40 42.5523 39.5523 43 39 43H31C30.4477 43 30 42.5523 30 42V6Z"></path>
+  </svg>
+);
+
+export const PersonIcon = ({
+  className,
+  width,
+  height,
+  ...props
+}: IconProp) => (
+  <svg
+    {...props}
+    className={className}
+    width={width || "2rem"}
+    height={height || "2rem"}
+    viewBox="0 0 48 48"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M24.0003 7C20.1343 7 17.0003 10.134 17.0003 14C17.0003 17.866 20.1343 21 24.0003 21C27.8663 21 31.0003 17.866 31.0003 14C31.0003 10.134 27.8663 7 24.0003 7ZM13.0003 14C13.0003 7.92487 17.9252 3 24.0003 3C30.0755 3 35.0003 7.92487 35.0003 14C35.0003 20.0751 30.0755 25 24.0003 25C17.9252 25 13.0003 20.0751 13.0003 14ZM24.0003 33C18.0615 33 13.0493 36.9841 11.4972 42.4262C11.3457 42.9573 10.8217 43.3088 10.2804 43.1989L8.32038 42.8011C7.77914 42.6912 7.4266 42.1618 7.5683 41.628C9.49821 34.358 16.1215 29 24.0003 29C31.8792 29 38.5025 34.358 40.4324 41.628C40.5741 42.1618 40.2215 42.6912 39.6803 42.8011L37.7203 43.1989C37.179 43.3088 36.6549 42.9573 36.5035 42.4262C34.9514 36.9841 29.9391 33 24.0003 33Z"
+    ></path>
+  </svg>
+);
+
+export const CloseIcon = ({ className, width, height, ...props }: IconProp) => (
+  <svg
+    {...props}
+    className={className}
+    width={width || "2.5rem"}
+    height={height || "2.5rem"}
+    viewBox="0 0 48 48"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M21.1718 23.9999L10.2931 13.1212C9.90261 12.7307 9.90261 12.0975 10.2931 11.707L11.7074 10.2928C12.0979 9.90228 12.731 9.90228 13.1216 10.2928L24.0002 21.1715L34.8789 10.2928C35.2694 9.90228 35.9026 9.90228 36.2931 10.2928L37.7073 11.707C38.0979 12.0975 38.0979 12.7307 37.7073 13.1212L26.8287 23.9999L37.7073 34.8786C38.0979 35.2691 38.0979 35.9023 37.7073 36.2928L36.2931 37.707C35.9026 38.0975 35.2694 38.0975 34.8789 37.707L24.0002 26.8283L13.1216 37.707C12.731 38.0975 12.0979 38.0975 11.7074 37.707L10.2931 36.2928C9.90261 35.9023 9.90261 35.2691 10.2931 34.8786L21.1718 23.9999Z"
+    ></path>
+  </svg>
+);
+
+export const GoogleIcon = ({
+  className,
+  width,
+  height,
+  ...props
+}: IconProp) => (
+  <svg
+    {...props}
+    className={className}
+    width={width || "2rem"}
+    height={height || "2rem"}
+    viewBox="0 0 48 48"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M43 24.4313C43 23.084 42.8767 21.7885 42.6475 20.5449H24.3877V27.8945H34.8219C34.3724 30.2695 33.0065 32.2818 30.9532 33.6291V38.3964H37.2189C40.885 35.0886 43 30.2177 43 24.4313Z"
+      fill="#4285F4"
+    ></path>
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M24.3872 43.001C29.6219 43.001 34.0107 41.2996 37.2184 38.3978L30.9527 33.6305C29.2165 34.7705 26.9958 35.4441 24.3872 35.4441C19.3375 35.4441 15.0633 32.1018 13.5388 27.6108H7.06152V32.5337C10.2517 38.7433 16.8082 43.001 24.3872 43.001Z"
+      fill="#34A853"
+    ></path>
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M13.5395 27.6094C13.1516 26.4695 12.9313 25.2517 12.9313 23.9994C12.9313 22.7472 13.1516 21.5295 13.5395 20.3894V15.4668H7.06217C5.74911 18.0318 5 20.9336 5 23.9994C5 27.0654 5.74911 29.9673 7.06217 32.5323L13.5395 27.6094Z"
+      fill="#FBBC04"
+    ></path>
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M24.3872 12.5568C27.2336 12.5568 29.7894 13.5155 31.7987 15.3982L37.3595 9.94866C34.0018 6.88281 29.6131 5 24.3872 5C16.8082 5 10.2517 9.25777 7.06152 15.4674L13.5388 20.39C15.0633 15.8991 19.3375 12.5568 24.3872 12.5568Z"
+      fill="#EA4335"
     ></path>
   </svg>
 );

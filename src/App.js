@@ -1,9 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { publicRouters } from "@/Routers";
-
 function App() {
   return (
-    <Router>
       <Routes>
         {publicRouters.map((router, index) => {
           const Page = router.page;
@@ -21,7 +19,6 @@ function App() {
           );
         })}
       </Routes>
-    </Router>
   );
 }
 

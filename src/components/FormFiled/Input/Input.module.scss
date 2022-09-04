@@ -1,0 +1,26 @@
+.wrapper {
+}
+
+.label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgba(22, 24, 35, 1);
+  margin-bottom: 4px;
+}
+
+.input {
+  min-height: 42px;
+  border: 1px solid rgba(22, 24, 35, 0.12);
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  padding: 0px 80px 0px 16px;
+  width: 100%;
+}
+
+.validate-message {
+  color: red;
+  margin-top: 12px;
+}

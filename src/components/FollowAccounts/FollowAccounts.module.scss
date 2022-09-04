@@ -1,0 +1,20 @@
+.wrapper {
+  padding: 16px 0;
+}
+
+.title {
+  padding: 0 8px;
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+  line-height: 20px;
+}
+
+.see-all {
+  margin-top: 8px;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 20px;
+  padding-left: 8px;
+  cursor: pointer;
+}

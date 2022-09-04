@@ -14,7 +14,7 @@
   user-select: none;
   border-radius: 4px;
   font-family: "ProximaNova", sans-serif;
-  background-color: var(--white);
+  background: var(--white);
   + .button {
     margin-left: 10px;
   }
@@ -64,6 +64,10 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.title {
+  flex: 1;
 }
 
 .small {
