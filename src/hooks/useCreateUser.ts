@@ -1,4 +1,4 @@
-import { createUserService } from "@/services/auth";
+import { createUserService } from "@/api/user/auth";
 import { useAuthStore } from "@/store/auth";
 import { useCallback } from "react";
 const useCreateUser = () => {

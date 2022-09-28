@@ -1,0 +1,54 @@
+.wrap-comment {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  .wrap-body {
+    flex: 1;
+    .name {
+      font-weight: 700;
+      font-size: 1.8rem;
+      line-height: 25px;
+    }
+  }
+
+  .link-avatar {
+    margin-right: 12px;
+  }
+  .comment {
+    font-size: 1.6rem;
+    line-height: 22px;
+    white-space: pre-line;
+    word-break: break-word;
+    margin-bottom: 6px;
+  }
+  .date-reply {
+    color: rgba(22, 24, 35, 0.5);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    line-height: 20px;
+    span + span {
+      margin-left: 24px;
+    }
+    span:last-child {
+      cursor: pointer;
+    }
+  }
+  .wrap-right {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(22, 24, 35, 0.5);
+  }
+  .dot-more {
+    opacity: 0;
+    visibility: hidden;
+    color: black;
+  }
+  &:hover .dot-more {
+    opacity: 1;
+    visibility: visible;
+  }
+}

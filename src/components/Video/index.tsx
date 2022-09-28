@@ -47,11 +47,13 @@ const Video = (props: Props) => {
     }
   };
 
-  const handlePause = () => {
+  const handlePause = (e: any) => {
+    e.stopPropagation();
     setIsPause(!isPause);
   };
 
-  const handleSpeaker = () => {
+  const handleSpeaker = (e: any) => {
+    e.stopPropagation();
     setIsMute(!isMute);
   };
 

@@ -3,7 +3,7 @@ import AccountItem from "@/components/AccountItem";
 import { SearchIcon } from "@/components/icons";
 import Popover from "@/components/Popover";
 import useDebounce from "@/hooks/useDebounce";
-import { apiSearchUser } from "@/services/search";
+import { apiSearchUser } from "@/api/user/search";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import HeadlessTippy from "@tippyjs/react/headless";

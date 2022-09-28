@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import classNames from "classnames/bind";
 import styles from "./SuggestedAccounts.module.scss";
-import { apiSuggestedAccounts } from "@/services/suggestedAccounts";
+import { apiSuggestedAccounts } from "@/api/user/suggestedAccounts";
 import SuggestedItem from "./SuggestedItem";
 const cx = classNames.bind(styles);
 

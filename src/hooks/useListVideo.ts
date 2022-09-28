@@ -1,4 +1,4 @@
-import { getVideoApi } from "@/services/videos";
+import { getListPostApi } from "@/api/post";
 import { IPostItem } from "@/types";
 import { useEffect, useState } from "react";
 
@@ -8,7 +8,7 @@ const useListVideo = () => {
   useEffect(() => {
     const getApi = async () => {
       try {
-        const data = await getVideoApi();
+        const data = await getListPostApi();
         if (data) {
           const convertData = data.map((item: any) => {
             return {

@@ -2,11 +2,12 @@ import React from "react";
 import styles from "./PostItem.module.scss";
 import classnames from "classnames/bind";
 import Button from "../Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IPostItem } from "@/types";
 import Video from "../Video";
 import { CommentIcon, HeartIcon, ShareIcon } from "../icons";
 import Image from "../Image";
+import { ROUTES_NAME } from "@/constants";
 const cx = classnames.bind(styles);
 
 type IProps = {
@@ -14,6 +15,12 @@ type IProps = {
 };
 
 const PostItem = ({ data }: IProps) => {
+  const navigate = useNavigate();
+
+  const handleRedirectDetailPage = () => {
+    navigate(`${ROUTES_NAME.DETAIL}/${data.id}`);
+  };
+
   return (
     <div className={cx("wrapper")}>
       <div className={cx("wrap-avatar")}>
@@ -32,27 +39,30 @@ const PostItem = ({ data }: IProps) => {
           </div>
         </div>
         <div className={cx("wrap-body")}>
-          <div className={cx("wrap-video")}>
+          <div className={cx("wrap-video")} onClick={handleRedirectDetailPage}>
             <Video url={data.video.asset.url} />
           </div>
+
           <div className={cx("wrap-action")}>
             <div className={cx("wrap-action-item")}>
               <div className={cx("wrap-action-icon")}>
                 <HeartIcon />
               </div>
-              <span>22.2k</span>
+              <span>{data.likes.length}</span>
             </div>
-            <div className={cx("wrap-action-item")}>
-              <div className={cx("wrap-action-icon")}>
-                <CommentIcon />
+            <Link to={`${ROUTES_NAME.DETAIL}/${data.id}`}>
+              <div className={cx("wrap-action-item")}>
+                <div className={cx("wrap-action-icon")}>
+                  <CommentIcon />
+                </div>
+                <span>{data.comments.length}</span>
               </div>
-              <span>122</span>
-            </div>
+            </Link>
             <div className={cx("wrap-action-item")}>
               <div className={cx("wrap-action-icon")}>
                 <ShareIcon />
               </div>
-              <span>3456</span>
+              <span>0</span>
             </div>
           </div>
         </div>

@@ -1,0 +1,14 @@
+.wrap {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.wrap-video {
+  flex: 1 1 896px;
+}
+
+.wrap-info {
+  flex: 0 0 544px;
+  width: 544px;
+}

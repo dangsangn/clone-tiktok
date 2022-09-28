@@ -1,5 +1,5 @@
 import { request } from "@/api/request";
-import { ParamsProps, ResponseType } from "./type";
+import { ParamsProps, ResponseType } from "../type";
 
 export function apiSuggestedAccounts(
   params?: ParamsProps

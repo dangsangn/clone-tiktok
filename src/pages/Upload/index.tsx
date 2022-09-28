@@ -6,7 +6,7 @@ import UploadVideo from "./components/UploadVideo";
 import Form from "./components/Form";
 import { SanityAssetDocument } from "@sanity/client";
 import { useAuthStore } from "@/store/auth";
-import { postVideoApi } from "@/services/videos";
+import { createPostApi } from "@/api/post";
 import { useNavigate } from "react-router-dom";
 import { TOPIC } from "@/data";
 const cx = className.bind(styles);
@@ -44,7 +44,7 @@ const Upload = () => {
         },
         topic,
       };
-      await postVideoApi(doc);
+      await createPostApi(doc);
       navigate("/");
     }
   };
@@ -64,10 +64,7 @@ const Upload = () => {
         </div>
         <div className={cx("wrap-body")}>
           <div className={cx("wrap-upload")}>
-            <UploadVideo
-              video={video}
-              setVideo={setVideo}
-            />
+            <UploadVideo video={video} setVideo={setVideo} />
           </div>
           <div className={cx("wrap-form")}>
             <Form

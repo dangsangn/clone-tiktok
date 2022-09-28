@@ -5,4 +5,5 @@ export const ROUTES_NAME = {
   FOLLOWING: "/following",
   UPLOAD: "/upload",
   LIVE: "/live",
+  DETAIL: "/detail",
 };

@@ -1,0 +1,38 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  .input:not(:placeholder-shown) ~ .button-post {
+    color: var(--primary);
+    cursor: pointer;
+  }
+}
+
+.input {
+  background-color: rgba(22, 24, 35, 0.06);
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 0px 9px;
+  height: 40px;
+  flex: 1;
+  color: rgba(22, 24, 35, 0.75);
+  font-size:1.4rem;
+  line-height: 17px;
+  &:focus {
+    border: 1px solid #aaa;
+  }
+  
+}
+
+.button-post {
+  color: rgba(22, 24, 35, 0.34);
+  font-size: 14px;
+  cursor: default;
+  flex: 0 0 48px;
+  line-height: 39px;
+  text-align: right;
+  margin-right: 4px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+}

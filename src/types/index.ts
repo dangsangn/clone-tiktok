@@ -1,7 +1,7 @@
 export interface IPostItem {
   caption: string;
   postedBy: IUser;
-  likes: number[];
+  likes: { postedBy: IUser }[];
   comments: IComment[];
   video: {
     asset: {
@@ -11,7 +11,7 @@ export interface IPostItem {
     id: string;
   };
   id: string;
-  isFllowing: boolean;
+  isFollowing?: boolean;
 }
 
 export interface IUser {
