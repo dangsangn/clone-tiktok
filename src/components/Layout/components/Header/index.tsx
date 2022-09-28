@@ -1,12 +1,8 @@
-<<<<<<< HEAD:src/components/Layout/components/Header/index.tsx
 import React, { useEffect } from "react";
 import classNames from "classnames/bind";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 
-=======
-import React from "react";
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7:src/components/Layout/components/Header/index.jsx
 import Logo from "@/assets/images/logo.svg";
 import Button from "@/components/Button";
 import * as icons from "@/components/icons";
@@ -21,7 +17,6 @@ import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Search from "../Search";
 import styles from "./Header.module.scss";
-<<<<<<< HEAD:src/components/Layout/components/Header/index.tsx
 import { ROUTES_NAME } from "@/constants";
 import { Link } from "react-router-dom";
 const cx = classNames.bind(styles);
@@ -36,15 +31,6 @@ export default function Header() {
     handlePreventClickOut && handlePreventClickOut();
   }, [handlePreventClickOut]);
 
-=======
-import useModal from "@/hooks/useModal";
-import Login from "@/components/Login";
-const cx = classNames.bind(styles);
-
-export default function Header() {
-  const [loginPresent, loginDismiss] = useModal(<Login />);
-  const currentUser = false;
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7:src/components/Layout/components/Header/index.jsx
   const handleClick = () => {
     console.log("click");
   };

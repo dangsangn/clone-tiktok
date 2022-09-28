@@ -1,7 +1,6 @@
 export const allPostsQuery = () => {
   const query = `*[_type == "post"] | order(_createdAt desc){
     _id,
-<<<<<<< HEAD
     caption,
     video{
       asset->{
@@ -15,21 +14,6 @@ export const allPostsQuery = () => {
       userName,
       image
     },
-=======
-     caption,
-       video{
-        asset->{
-          _id,
-          url
-        }
-      },
-      userId,
-      postedBy->{
-        _id,
-        userName,
-        image
-      },
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
     likes,
     comments[]{
       comment,
@@ -38,11 +22,7 @@ export const allPostsQuery = () => {
       _id,
       userName,
       image
-<<<<<<< HEAD
       },
-=======
-    },
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
     }
   }`;
 
@@ -52,7 +32,6 @@ export const allPostsQuery = () => {
 export const postDetailQuery = (postId: string | string[]) => {
   const query = `*[_type == "post" && _id == '${postId}']{
     _id,
-<<<<<<< HEAD
     caption,
     video{
       asset->{
@@ -61,26 +40,12 @@ export const postDetailQuery = (postId: string | string[]) => {
       }
     },
     userId,
-=======
-     caption,
-       video{
-        asset->{
-          _id,
-          url
-        }
-      },
-      userId,
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
     postedBy->{
       _id,
       userName,
       image
     },
-<<<<<<< HEAD
     likes,
-=======
-     likes,
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
     comments[]{
       comment,
       _key,
@@ -96,7 +61,6 @@ export const postDetailQuery = (postId: string | string[]) => {
 export const searchPostsQuery = (searchTerm: string | string[]) => {
   const query = `*[_type == "post" && caption match '${searchTerm}*' || topic match '${searchTerm}*'] {
     _id,
-<<<<<<< HEAD
     caption,
     video{
       asset->{
@@ -105,26 +69,12 @@ export const searchPostsQuery = (searchTerm: string | string[]) => {
         }
       },
     userId,
-=======
-     caption,
-       video{
-        asset->{
-          _id,
-          url
-        }
-      },
-      userId,
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
     postedBy->{
       _id,
       userName,
       image
     },
-<<<<<<< HEAD
     likes,
-=======
-likes,
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
     comments[]{
       comment,
       _key,
@@ -132,11 +82,7 @@ likes,
       _id,
       userName,
       image
-<<<<<<< HEAD
       },
-=======
-    },
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
     }
   }`;
   return query;
@@ -157,7 +103,6 @@ export const allUsersQuery = () => {
 export const userCreatedPostsQuery = (userId: string | string[]) => {
   const query = `*[ _type == 'post' && userId == '${userId}'] | order(_createdAt desc){
     _id,
-<<<<<<< HEAD
     caption,
     video{
       asset->{
@@ -166,27 +111,12 @@ export const userCreatedPostsQuery = (userId: string | string[]) => {
       }
     },
     userId,
-=======
-     caption,
-       video{
-        asset->{
-          _id,
-          url
-        }
-      },
-      userId,
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
     postedBy->{
       _id,
       userName,
       image
     },
-<<<<<<< HEAD
     likes,
-=======
- likes,
-
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
     comments[]{
       comment,
       _key,
@@ -194,11 +124,7 @@ export const userCreatedPostsQuery = (userId: string | string[]) => {
       _id,
       userName,
       image
-<<<<<<< HEAD
       },
-=======
-    },
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
     }
   }`;
 
@@ -208,7 +134,6 @@ export const userCreatedPostsQuery = (userId: string | string[]) => {
 export const userLikedPostsQuery = (userId: string | string[]) => {
   const query = `*[_type == 'post' && '${userId}' in likes[]._ref ] | order(_createdAt desc) {
     _id,
-<<<<<<< HEAD
     caption,
     video{
       asset->{
@@ -217,27 +142,12 @@ export const userLikedPostsQuery = (userId: string | string[]) => {
       }
     },
     userId,
-=======
-     caption,
-       video{
-        asset->{
-          _id,
-          url
-        }
-      },
-      userId,
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
     postedBy->{
       _id,
       userName,
       image
     },
-<<<<<<< HEAD
     likes,
-=======
- likes,
-
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
     comments[]{
       comment,
       _key,
@@ -245,11 +155,7 @@ export const userLikedPostsQuery = (userId: string | string[]) => {
       _id,
       userName,
       image
-<<<<<<< HEAD
       },
-=======
-    },
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
     }
   }`;
 
@@ -259,7 +165,6 @@ export const userLikedPostsQuery = (userId: string | string[]) => {
 export const topicPostsQuery = (topic: string | string[]) => {
   const query = `*[_type == "post" && topic match '${topic}*'] {
     _id,
-<<<<<<< HEAD
     caption,
     video{
       asset->{
@@ -268,26 +173,12 @@ export const topicPostsQuery = (topic: string | string[]) => {
       }
     },
     userId,
-=======
-     caption,
-       video{
-        asset->{
-          _id,
-          url
-        }
-      },
-      userId,
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
     postedBy->{
       _id,
       userName,
       image
     },
-<<<<<<< HEAD
     likes,
-=======
- likes,
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
 
     comments[]{
       comment,
@@ -296,11 +187,7 @@ export const topicPostsQuery = (topic: string | string[]) => {
       _id,
       userName,
       image
-<<<<<<< HEAD
       },
-=======
-    },
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
     }
   }`;
 

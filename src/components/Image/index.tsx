@@ -14,11 +14,7 @@ type Props = {
 };
 
 const Image = forwardRef<HTMLImageElement, Props>(
-<<<<<<< HEAD
   ({ src, alt = "image", className, style, width, height }, ref) => {
-=======
-  ({ src = "", alt = "image", className, style, width, height }, ref) => {
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
     const [srcImage, setSrcImage] = useState<string>(src);
     
     useEffect(() => {
