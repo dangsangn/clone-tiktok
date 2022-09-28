@@ -13,10 +13,17 @@ const Home = (props: IProps) => {
   return (
     <div className={cx("wrapper")}>
       {listVideo.map((item: IPostItem) => (
+<<<<<<< HEAD
         <React.Fragment key={item.id}>
           <VideoItem data={item} />
           <Line />
         </React.Fragment>
+=======
+        <>
+          <VideoItem data={item} key={item.id} />
+          <Line />
+        </>
+>>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
       ))}
     </div>
   );

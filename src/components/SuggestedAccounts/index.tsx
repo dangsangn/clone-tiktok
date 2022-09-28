@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import classNames from "classnames/bind";
 import styles from "./SuggestedAccounts.module.scss";
+<<<<<<< HEAD
 import { apiSuggestedAccounts } from "@/api/user/suggestedAccounts";
+=======
+import { apiSuggestedAccounts } from "@/services/suggestedAccounts";
+>>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
 import SuggestedItem from "./SuggestedItem";
 const cx = classNames.bind(styles);
 

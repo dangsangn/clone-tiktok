@@ -21,7 +21,11 @@ const Footer = (props: Props) => {
           "Careers",
           "ByteDance",
         ].map((item: string) => (
+<<<<<<< HEAD
           <NavigateComp key={item} link={item} name={item} />
+=======
+          <NavigateComp link={item} name={item} />
+>>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
         ))}
       </div>
       <div className={cx("wrapper-item")}>
@@ -32,7 +36,11 @@ const Footer = (props: Props) => {
           "Transparency",
           "TikTok Rewards",
         ].map((item: string) => (
+<<<<<<< HEAD
           <NavigateComp key={item} link={item} name={item} />
+=======
+          <NavigateComp link={item} name={item} />
+>>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
         ))}
       </div>
       <div className={cx("wrapper-item")}>
@@ -44,7 +52,11 @@ const Footer = (props: Props) => {
           "Creator Portal",
           "Community Guidelines",
         ].map((item: string) => (
+<<<<<<< HEAD
           <NavigateComp key={item} link={item} name={item} />
+=======
+          <NavigateComp link={item} name={item} />
+>>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
         ))}
       </div>
     </div>

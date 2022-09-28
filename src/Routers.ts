@@ -28,6 +28,11 @@ const publicRouters = [
     page: Detail,
     layout: null,
   },
+  {
+    path: "/live",
+    page: Live,
+    layout: DefaultLayout,
+  },
 ];
 
 //private route
