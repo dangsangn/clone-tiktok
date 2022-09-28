@@ -32,7 +32,7 @@ function Login({ handleDismiss }: Props) {
             </span>
           </div>
         </Button>
-        <LoginGoogle />
+        <LoginGoogle handleDismiss={handleDismiss} />
       </div>
       <div className={cx("wrapper-footer")}>
         <div>Don’t have an account? </div>

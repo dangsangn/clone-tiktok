@@ -8,9 +8,11 @@ import { GoogleIcon } from "../icons";
 import styles from "./Login.module.scss";
 import useCreateUser from "@/hooks/useCreateUser";
 const cx = className.bind(styles);
-type Props = {};
+type Props = {
+  handleDismiss?: () => void;
+};
 
-const LoginGoogle = (props: Props) => {
+const LoginGoogle = ({ handleDismiss }: Props) => {
   const createUser = useCreateUser();
   useEffect(() => {
     function start() {
@@ -26,6 +28,7 @@ const LoginGoogle = (props: Props) => {
   const responseGoogle = (response: any) => {
     if (response) {
       createUser(response);
+      handleDismiss && handleDismiss();
     }
   };
 

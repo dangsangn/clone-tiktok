@@ -53,7 +53,6 @@ const USER_MENU = [
   {
     icon: <icons.LogoutIcon />,
     title: "Log out",
-    to: "/logout",
     separate: true,
   },
 ];

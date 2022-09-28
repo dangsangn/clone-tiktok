@@ -1,11 +1,14 @@
 import React from "react";
 import Popover from "@/components/Popover";
-import Tippy from "@tippyjs/react/headless";
-import classNames from "classnames/bind";
 import { useState } from "react";
+import Tippy from "@tippyjs/react/headless";
+import { useGoogleLogout } from "react-google-login";
+
+import classNames from "classnames/bind";
 import MenuItem from "../MenuItem";
 import Header from "./Header";
 import styles from "./Menu.module.scss";
+import { useAuthStore } from "@/store/auth";
 const cx = classNames.bind(styles);
 
 type MenuProps = {
@@ -13,11 +16,23 @@ type MenuProps = {
   children: any;
 };
 const Menu = ({ menu, children }: MenuProps) => {
+  const { removeUser } = useAuthStore();
   const [listMenu, setListMenu] = useState([{ data: menu }]);
   const lastList: any = listMenu[listMenu.length - 1];
-  const handleOpenSubMenu = (index: number) => {
+  const { signOut } = useGoogleLogout({
+    clientId: `${process.env.REACT_APP_CLIENT_ID}`,
+    onFailure: () => {
+      console.log("error");
+    },
+  });
+  const handleOpenSubMenu = (index: number, data: any) => {
     if (lastList.data[index].children) {
       setListMenu((pre) => [...pre, lastList.data[index].children]);
+    } else {
+      if (data?.title === "Log out") {
+        signOut();
+        removeUser();
+      }
     }
   };
 
@@ -46,7 +61,7 @@ const Menu = ({ menu, children }: MenuProps) => {
                   <MenuItem
                     key={index}
                     data={item}
-                    onClick={() => handleOpenSubMenu(index)}
+                    onClick={() => handleOpenSubMenu(index, item)}
                   />
                 ))}
               </div>

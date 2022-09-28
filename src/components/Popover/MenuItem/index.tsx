@@ -15,6 +15,7 @@ const MenuItem = ({ data, onClick }: MenuItemProps) => {
           width: "100%",
           justifyContent: "flex-start",
         }}
+        titleStyle={{ textAlign: "left" }}
         leftIcon={data?.icon}
         to={data?.to}
         onClick={onClick}

@@ -21,6 +21,7 @@ export type ButtonProps = {
   onClick?: () => void;
   separate?: boolean;
   style?: React.CSSProperties;
+  titleStyle?: React.CSSProperties;
 };
 export default function Button({
   to,
@@ -39,6 +40,7 @@ export default function Button({
   onClick,
   separate,
   style,
+  titleStyle,
   ...passProps
 }: ButtonProps) {
   let Comp: any = "button";
@@ -79,7 +81,7 @@ export default function Button({
   return (
     <Comp className={classes} {...props} style={style}>
       {leftIcon && <span className={cx("icon")}>{leftIcon}</span>}
-      <span className={cx("title")}>{children}</span>
+      <span style={titleStyle} className={cx("title")}>{children}</span>
       {rightIcon && <span className={cx("icon")}>{rightIcon}</span>}
     </Comp>
   );

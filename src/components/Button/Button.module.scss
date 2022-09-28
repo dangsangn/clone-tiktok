@@ -31,7 +31,7 @@
   background-color: var(--primary);
   color: var(--white);
   &:hover {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),#FE2C55;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
   }
 }
 
@@ -40,7 +40,7 @@
   background-color: var(--white);
   color: var(--primary);
   &:hover {
-        background-color: rgba(254, 44, 85, 0.06);
+    background-color: rgba(254, 44, 85, 0.06);
   }
 }
 
@@ -49,7 +49,7 @@
   background-color: var(--white);
   color: var(--black);
   &:hover {
-        background-color: rgba(22, 24, 35, 0.03);
+    background-color: rgba(22, 24, 35, 0.03);
   }
 }
 
@@ -59,7 +59,7 @@
 }
 
 .icon {
-  width: 20px ;
+  width: 20px;
   height: 20px;
   display: inline-flex;
   justify-content: center;
