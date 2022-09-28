@@ -59,10 +59,7 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.1.1",
-<<<<<<< HEAD
     "@types/uuid": "^8.3.4",
-=======
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
     "autoprefixer": "^10.4.8",
     "babel-plugin-module-resolver": "^4.1.0",
     "customize-cra": "^1.0.0",

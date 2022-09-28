@@ -108,7 +108,6 @@ const discover: HashTagProps[] = [
   { name: "Tình Đã Đầy Một Tim - Huyền Tâm Môn", type: "music" },
 ];
 
-<<<<<<< HEAD
 const TOPIC = [
   {
     name: "dance",
@@ -128,6 +127,3 @@ const TOPIC = [
 ];
 
 export { MENU_ITEMS, USER_MENU, NAV_BAR, discover, TOPIC };
-=======
-export { MENU_ITEMS, USER_MENU, NAV_BAR, discover };
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7

@@ -1,5 +1,4 @@
 import React from 'react'
-<<<<<<< HEAD
 import styles from "./Login.module.scss";
 import className from "classnames/bind";
 import Button from "../Button";
@@ -43,15 +42,6 @@ function Login({ handleDismiss }: Props) {
       </div>
     </div>
   );
-=======
-
-type Props = {}
-
-function Login({}: Props) {
-  return (
-    <div>Login</div>
-  )
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
 }
 
 export default Login

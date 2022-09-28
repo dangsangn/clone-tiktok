@@ -4,11 +4,7 @@
 
 .wrapper-header {
   width: 100%;
-<<<<<<< HEAD
   height: var(--height-header);
-=======
-  height: 60px;
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
 }
 
 .wrapper-body {
@@ -24,11 +20,7 @@
   width: 340px;
   flex-shrink: 0;
   padding: 20px 0 26px;
-<<<<<<< HEAD
   height: calc(100vh - var(--height-header));
-=======
-  height: calc(100vh - 60px);
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
   overflow-y: scroll;
 }
 
@@ -41,11 +33,7 @@
   padding: 24px 0;
   position: relative;
   overflow-y: scroll;
-<<<<<<< HEAD
   height: calc(100vh - var(--height-header));
-=======
-  height: calc(100vh - 60px);
->>>>>>> a1d0249830988595ab02fc0bf8709515fd55fec7
   &::-webkit-scrollbar {
     display: none;
 }
